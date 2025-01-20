@@ -89,8 +89,12 @@ WSGI_APPLICATION = 'sensors_data_backend.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'sensors_data_db',  # Your database name
+        'USER': 'vivek',    # Your existing PostgreSQL user
+        'PASSWORD': 'vivek@27',# Your PostgreSQL user's password
+        'HOST': 'localhost',        # Set to 'localhost' or your PostgreSQL server IP
+        'PORT': '5432',             # Default PostgreSQL port
     }
 }
 
